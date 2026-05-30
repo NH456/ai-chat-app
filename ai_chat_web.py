@@ -4,9 +4,9 @@ from openai import OpenAI
 import streamlit as st
 
 # ---------- 火山引擎配置（按你的情况修改） ----------
-API_KEY = "ark-83732f77-dbe9-4fd7-b9c4-a51691409da3-4ceab"  # 你的火山API Key
-BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"  # 火山固定地址
-MODEL = "ep-20260530002352-rq9br"  # 你的DeepSeek接入点ID
+API_KEY = st.secrets["API_KEY"]
+BASE_URL = st.secrets["BASE_URL"]
+MODEL = st.secrets["MODEL"]
 HISTORY_FILE = "chat_history.json"
 
 # ---------- 初始化客户端 ----------
